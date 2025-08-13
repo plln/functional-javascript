@@ -11,7 +11,7 @@ const tripleMe = function (x) {
 const waffle = tripleMe;
 console.log('30 times 3 =', waffle(30));
 
-const animals = [
+var animals = [
     { name: 'FluffyKins', species: 'rabbit' },
     { name: 'Caro', species: 'dog' },
     { name: 'Hamilton', species: 'fish' },
@@ -20,8 +20,8 @@ const animals = [
     { name: 'Jimmy', species: 'dog' },
     { name: 'Luna', species: 'cat' },
     { name: 'Fido', species: 'dog' },
-    { name: 'Mittens', species: 'cat' },
-];
+    { name: 'Mittens', species: 'cat' }
+]
 
 const dogs_0 = [];
 for (var i = 0; i < animals.length; i++) {
@@ -30,7 +30,7 @@ for (var i = 0; i < animals.length; i++) {
     }
 }
 
-console.log("Dogs:", dogs_0);
+console.log("Dogs:", JSON.stringify(dogs_0));
 
 //callback function
 const isDog = function (animal) {
@@ -39,7 +39,7 @@ const isDog = function (animal) {
 
 //filter is the higher order function
 const dogs_1 = animals.filter(isDog);
-console.log("Dogs:", dogs_1);
+console.log("Dogs:", JSON.stringify(dogs_1));
 
 //const isNotDog = !isDog;
 //I wish it was this simple!
@@ -48,4 +48,4 @@ const isNotDog = function (animal) {
 };
 
 const others = animals.filter(isNotDog);
-console.log("Others:", others);
+console.log("Other than dogs:", JSON.stringify(others));
