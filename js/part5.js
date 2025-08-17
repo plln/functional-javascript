@@ -31,6 +31,7 @@ function greet(who) {
 }
 
 greet('Batman')();
+console.dir(greet);
 
 const greetBatman = greet('Batman');
 greetBatman();
@@ -40,4 +41,9 @@ for (let i = 0; i < 3; i++) {
     setTimeout(log, 1000);
 }
 
-console.dir(greet);
+for (var i = 0; i < 3; i++) {
+    ((i) => {
+        const log = () => console.log(i);
+        setTimeout(log, 1000);
+    })(i);
+}
