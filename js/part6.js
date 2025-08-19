@@ -47,3 +47,13 @@ console.log(JSON.stringify(fireDragons));
 //a curried function is simply a function that takes every argument by itself
 //and returns a new function that expects the next dependency until all dependencies
 //have been fulfilled
+
+const expectedCTC = (percent) => {
+    return (currentCTC) => (percent / 100) * currentCTC + currentCTC;
+};
+
+const tenPercentHike = expectedCTC(10);
+console.log(tenPercentHike(3800000));
+
+const fifteenPercentHike = expectedCTC(15);
+console.log(fifteenPercentHike(3800000));
