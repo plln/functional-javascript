@@ -7,3 +7,4 @@ part4 - reduce (complex) \
 part5 - closure \
 part6 - currying \
 part7 - recursion \
+part8 - promise
